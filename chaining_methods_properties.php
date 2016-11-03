@@ -33,4 +33,8 @@ $user11->lastName="Roe";
 $user11->register()->mail();
 
 //echo $user11->firstName." ".$user11->lastName." ".$user11->register()." ".$user11->mail();
-
+?>
+<br><br>
+<br><br>
+<a href="The_$this_keyword.php"><button ><- To previous excercise</button></a> 
+<a href="magic_methods_properties.php"><button >To next excercise -></button></a> 

@@ -21,3 +21,8 @@
  
  echo $userOne->getFullName();
  
+?>
+<br><br>
+<br><br>
+<a href="chaining_methods_properties.php"><button ><- To previous excercise</button></a> 
+<a href="inheritance.php"><button >To next excercise -></button></a> 

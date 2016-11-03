@@ -10,7 +10,7 @@ public function setUserName ($name){
 }
 public function getUsername()
 {
-  return $this->userName;
+  return $this->username;
 }
 
 }
@@ -22,10 +22,15 @@ class Admin extends User {
   }
   public function sayHello(){
     
-    return "Hello". strtolower(__CLASS__)." ,".$this->getUsername();
+    return "Hello ". strtolower(__CLASS__)." ,".$this->getUsername();
   }  
 }
 $admin1 = new Admin();
 $admin1->setUserName("Balthazar");
 echo $admin1->sayHello();
 //echo "Hello ".$admin1->expressYourRoll().", ".$admin1->getUsername();
+?>
+<br><br>
+<br><br>
+<a href="magic_methods_properties.php"><button ><- To previous excercise</button></a> 
+<a href="abstract_classes_methods.php"><button >To next excercise -></button></a> 
