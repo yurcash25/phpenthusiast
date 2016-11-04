@@ -43,15 +43,21 @@ class AuthorEditor extends Users implements Author,Editor{
         
     }
     public function getEditorsPrivileges() {
-        return $this->editorsPrivilegesArray;
+        return $this->editorPrivilegesArray;
     }
 }
 $user111 = new AuthorEditor();
 $user111->setUsername("Steve Carell");
 $user111->setAuthorPrivileges(array("wright text", "add punctuation"));
 $user111->setEditorsPrivileges(array("edit text", "edit punctuation"));
-echo (array($user111->getAuthorsPrivileges()));
-//echo $this->getUsername()." has following privileges: ".$this->getAuthorPrivileges();
+
+$privileges=array_merge($user111->getAuthorPrivileges(),$user111->getEditorsPrivileges());
+$username=$user111->getUsername();
+
+
+$userPrivileges=  implode(", ", $privileges);
+
+echo $username." has following privileges: ".$userPrivileges.".";
 
 
 
