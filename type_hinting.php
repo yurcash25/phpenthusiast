@@ -1,4 +1,5 @@
 <?php
+/*
 $models = array(
           array("Toyota, 12,14),
           array("BMW", 10,15));
@@ -14,7 +15,7 @@ echo $numberOfMiles = $item[1] * $item[2]."<br/>";
 }
 
 calcNumMilesOnFullTank($models);
-
+*/
 class Car {
 
 protected $driver;
@@ -24,7 +25,7 @@ protected $numberOfDoors;
 protected $price;
 
 //the constructor can only get Driver object as argument
-public function __construct( Car $driver)
+public function __construct(Driver $driver)
 {
  $this->driver=$driver;
 }

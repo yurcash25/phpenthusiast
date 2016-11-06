@@ -3,20 +3,20 @@
 
   interface User {
  
-  public function setUsername($username)
-  public function getUsername()
-  public function setGender($gender)
-  public function getGender()
+  public function setUsername($username);
+  public function getUsername();
+  public function setGender($gender);
+  public function getGender();
  
  }
-public class Commentator implement User {
+ class Commentator implements User {
   
   protected $username=' ';
   protected $gender='dont know';
   
   public function setUsername($username)
   {
-   $this->username= (isString($username))? $username : "N/A"; 
+   $this->username= (is_string($username))? $username : "N/A"; 
   }
   public function getUsername()
   {
@@ -37,7 +37,7 @@ public class Commentator implement User {
    
   }
  }
-public function greeting(User $greeting)
+ function greeting(User $greeting)
 {
   if ($greeting->getGender() === "male")
   {
@@ -48,10 +48,13 @@ public function greeting(User $greeting)
   return "Mrs.".$greeting->getUsername(); 
   }
 }
-  }
+  
 $userF=new Commentator();
 $userF->setUsername("Jane");
 $userF->setGender("female");
 echo greeting($userF);
 
 $userM=new Commentator();
+$userM->setUsername("Bobby");
+$userM->setGender("male");
+echo greeting($userM);
